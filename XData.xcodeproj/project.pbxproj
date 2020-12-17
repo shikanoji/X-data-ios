@@ -20,6 +20,8 @@
 		D77D4533258A40E7001EDC58 /* XDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4532258A40E7001EDC58 /* XDataUITests.swift */; };
 		D77D4544258A41F9001EDC58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D77D4543258A41F9001EDC58 /* GoogleService-Info.plist */; };
 		D77D457A258A5B7E001EDC58 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */; };
+		D77F5324258BB4E50061A3E3 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F5323258BB4E50061A3E3 /* Record.swift */; };
+		D77F5329258BB6290061A3E3 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F5328258BB6290061A3E3 /* Crawler.swift */; };
 		E9814733375996A519C4980A /* Pods_XDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24174388B1E90D2C2C5310B1 /* Pods_XDataTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		D77D4534258A40E7001EDC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D77D4543258A41F9001EDC58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		D77F5323258BB4E50061A3E3 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		D77F5328258BB6290061A3E3 /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
 		DAB75A40CB7E5F2B86028917 /* Pods-XData-XDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData-XDataUITests.debug.xcconfig"; path = "Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB7E2C5D8817205EF02E8190 /* Pods_XData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +146,8 @@
 				D77D4516258A40E6001EDC58 /* XData.xcdatamodeld */,
 				D77D4543258A41F9001EDC58 /* GoogleService-Info.plist */,
 				D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */,
+				D77F5323258BB4E50061A3E3 /* Record.swift */,
+				D77F5328258BB6290061A3E3 /* Crawler.swift */,
 			);
 			path = XData;
 			sourceTree = "<group>";
@@ -416,8 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77F5329258BB6290061A3E3 /* Crawler.swift in Sources */,
 				D77D4518258A40E6001EDC58 /* XData.xcdatamodeld in Sources */,
 				D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */,
+				D77F5324258BB4E50061A3E3 /* Record.swift in Sources */,
 				D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */,
 				D77D4510258A40E6001EDC58 /* SceneDelegate.swift in Sources */,
 				D77D457A258A5B7E001EDC58 /* FirebaseHelper.swift in Sources */,

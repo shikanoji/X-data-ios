@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,18 +11,69 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XData" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-yr-oCj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-yr-oCj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-12-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-dv-Fel">
+                                <rect key="frame" x="148.66666666666666" y="104" width="116.66666666666666" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kết quả mới nhất" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coY-AX-f2Y">
+                                <rect key="frame" x="142.66666666666666" y="50" width="128.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-Pq-IXJ">
+                                <rect key="frame" x="47" y="178" width="320" height="216"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="157809600">
+                                    <!--2006-01-01 12:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="vi"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-hq-8wy">
+                                <rect key="frame" x="143.66666666666666" y="424" width="126.99999999999997" height="54"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Xnn-bR-VDT"/>
+                                    <constraint firstAttribute="width" constant="127" id="uck-ZL-Ik8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Lấy kết quả">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="systemGray2Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugc-3E-7ZK"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="coY-AX-f2Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1De-ea-HOK"/>
+                            <constraint firstItem="10m-hq-8wy" firstAttribute="top" secondItem="2Sr-Pq-IXJ" secondAttribute="bottom" constant="30" id="CPa-MO-BK3"/>
+                            <constraint firstItem="DhH-yr-oCj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ELi-QH-A3W"/>
+                            <constraint firstItem="DhH-yr-oCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gcn-Fc-UxP"/>
+                            <constraint firstItem="bid-dv-Fel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQJ-bH-e2x"/>
+                            <constraint firstAttribute="bottom" secondItem="DhH-yr-oCj" secondAttribute="bottom" id="ZaF-GU-V9v"/>
+                            <constraint firstItem="2Sr-Pq-IXJ" firstAttribute="top" secondItem="bid-dv-Fel" secondAttribute="bottom" constant="50" id="jFk-yw-4JL"/>
+                            <constraint firstItem="bid-dv-Fel" firstAttribute="top" secondItem="coY-AX-f2Y" secondAttribute="bottom" constant="33" id="l1h-C6-rQS"/>
+                            <constraint firstItem="DhH-yr-oCj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="meo-pt-gbA"/>
+                            <constraint firstItem="10m-hq-8wy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKX-vD-lQ6"/>
+                            <constraint firstItem="2Sr-Pq-IXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1j-eS-ezm"/>
+                            <constraint firstItem="coY-AX-f2Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="ptQ-aX-H7n"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="2Sr-Pq-IXJ" id="0PW-rN-n2B"/>
+                        <outlet property="lastRecordDate" destination="bid-dv-Fel" id="yGa-lT-5ei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,9 +81,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="750" height="1624"/>
+        <image name="background" width="250" height="541.33331298828125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

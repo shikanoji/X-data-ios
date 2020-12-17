@@ -10,6 +10,7 @@ target 'XData' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Alamofire'
+  pod 'ObjectMapper'
 
   target 'XDataTests' do
     inherit! :search_paths

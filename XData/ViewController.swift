@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lastRecordDate: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getRecords(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-mm-YYYY"
+        let dateString = dateFormatter.string(from: datePicker.date)
+        let crawler = Crawler()
+        crawler.getRecordOf(date: dateString)
+    }
+    
 }
 
