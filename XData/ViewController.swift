@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     @IBAction func getRecords(_ sender: Any) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-mm-YYYY"
+        dateFormatter.dateFormat = "dd-MM-YYYY"
         let dateString = dateFormatter.string(from: datePicker.date)
         let crawler = Crawler()
         crawler.getRecordOf(date: dateString)
