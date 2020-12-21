@@ -29,36 +29,20 @@ class FirebaseHelper {
             if let err = err {
                 completionHandler(err, nil)
             } else {
-                var year = 2006
-                var month = 1
-                var date = 1
-                for document in querySnapshot!.documents {
-                    let id = document.documentID
-                    guard let iYear = Int(String(id.suffix(4))) else {
-                        continue
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd-MM-yyyy"
+                if var lastestDate = dateFormatter.date(from: "01-01-2006") {
+                    for document in querySnapshot!.documents {
+                        if let documentDate = dateFormatter.date(from: document.documentID) {
+                            if Calendar.current.compare(documentDate, to: lastestDate, toGranularity: .day) == .orderedDescending {
+                                lastestDate = documentDate
+                            } else {
+                                continue
+                            }
+                        }
                     }
-                    
-                    if iYear < year {
-                        continue
-                    }
-                    
-                    guard let iDate = Int(String(id.prefix(2))) else {
-                        continue
-                    }
-                    let start = id.index(id.startIndex, offsetBy: 3)
-                    let end = id.index(id.endIndex, offsetBy: -5)
-                    let range = start..<end
-
-                    let mySubstring = id[range]
-                    guard let iMonth = Int(String(mySubstring)) else {
-                        continue
-                    }
-                    
-                    if iYear > year {
-                        year = iYear
-                        month = iMonth
-                        date = iDate
-                    }
+                    let dateString = dateFormatter.string(from: lastestDate)
+                    completionHandler(nil, dateString)
                 }
             }
         }

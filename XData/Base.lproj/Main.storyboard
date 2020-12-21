@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +20,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-yr-oCj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-12-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-dv-Fel">
-                                <rect key="frame" x="148.66666666666666" y="98.666666666666671" width="116.66666666666666" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-dv-Fel">
+                                <rect key="frame" x="207" y="98.666666666666671" width="0.0" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Krr-uR-GxX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,14 +36,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-Pq-IXJ">
-                                <rect key="frame" x="47" y="172.66666666666663" width="320" height="216"/>
+                                <rect key="frame" x="47" y="168.66666666666663" width="320" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="157809600">
                                     <!--2006-01-01 12:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="vi"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-hq-8wy">
-                                <rect key="frame" x="143.66666666666666" y="418.66666666666669" width="126.99999999999997" height="54"/>
+                                <rect key="frame" x="143.66666666666666" y="414.66666666666669" width="126.99999999999997" height="54"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Xnn-bR-VDT"/>
@@ -56,7 +60,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-fa-6ki">
-                                <rect key="frame" x="40" y="492.66666666666669" width="334" height="223.33333333333331"/>
+                                <rect key="frame" x="50" y="488.66666666666669" width="314" height="227.33333333333331"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -71,7 +75,7 @@
                             <constraint firstItem="DhH-yr-oCj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ELi-QH-A3W"/>
                             <constraint firstItem="DhH-yr-oCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gcn-Fc-UxP"/>
                             <constraint firstItem="bid-dv-Fel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQJ-bH-e2x"/>
-                            <constraint firstItem="jYD-fa-6ki" firstAttribute="leading" secondItem="VSR-Or-uQ7" secondAttribute="leading" constant="40" id="RTr-Kz-XVH"/>
+                            <constraint firstItem="jYD-fa-6ki" firstAttribute="leading" secondItem="VSR-Or-uQ7" secondAttribute="leading" constant="50" id="RTr-Kz-XVH"/>
                             <constraint firstItem="jYD-fa-6ki" firstAttribute="top" secondItem="10m-hq-8wy" secondAttribute="bottom" constant="20" id="VbD-kh-M4B"/>
                             <constraint firstAttribute="bottom" secondItem="DhH-yr-oCj" secondAttribute="bottom" id="ZaF-GU-V9v"/>
                             <constraint firstItem="VSR-Or-uQ7" firstAttribute="bottom" secondItem="jYD-fa-6ki" secondAttribute="bottom" constant="20" id="g39-eX-iYl"/>
@@ -81,7 +85,7 @@
                             <constraint firstItem="10m-hq-8wy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKX-vD-lQ6"/>
                             <constraint firstItem="2Sr-Pq-IXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1j-eS-ezm"/>
                             <constraint firstItem="coY-AX-f2Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="ptQ-aX-H7n"/>
-                            <constraint firstItem="VSR-Or-uQ7" firstAttribute="trailing" secondItem="jYD-fa-6ki" secondAttribute="trailing" constant="40" id="zCA-Iq-T4z"/>
+                            <constraint firstItem="VSR-Or-uQ7" firstAttribute="trailing" secondItem="jYD-fa-6ki" secondAttribute="trailing" constant="50" id="zCA-Iq-T4z"/>
                         </constraints>
                     </view>
                     <connections>

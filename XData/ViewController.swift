@@ -16,13 +16,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        dateFormatter.dateFormat = "dd-MM-YYYY"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        getRecordButton.layer.cornerRadius = 15
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        updateLastestRecord()
+    }
+    
+    func updateLastestRecord() {
+        FirebaseHelper.shared.lastestDate { err, date in
+            self.lastRecordDate.text = date
+        }
     }
     
     @IBAction func getRecords(_ sender: Any) {
-        getRecordOfDate(date: datePicker.date)
+        self.log.text = ""
         toogleUI()
         showLoadingAlert()
+        getRecordOfDate(date: datePicker.date)
     }
     
     func getRecordOfDate(date: Date) {
@@ -38,6 +48,8 @@ class ViewController: UIViewController {
                             let newText = "Failed to add record for date \(dateString)\n"
                             self.log.text = self.log.text + newText
                         }
+                        let bottom = NSMakeRange(self.log.text.count - 1, 1)
+                        self.log.scrollRangeToVisible(bottom)
                         
                         if let nextDate = self.getNextDayOf(date: date)
                         {
@@ -51,6 +63,7 @@ class ViewController: UIViewController {
                 }
             }
         } else {
+            //Do nothing
             self.dismiss(animated: true) {
                 self.toogleUI()
             }
@@ -86,11 +99,11 @@ class ViewController: UIViewController {
     }
     
     func showLoadingAlert() {
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Đang chạy...", preferredStyle: .alert)
 
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.style = UIActivityIndicatorView.Style.white
         loadingIndicator.startAnimating();
 
         alert.view.addSubview(loadingIndicator)
