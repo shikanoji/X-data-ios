@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,26 +21,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-12-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-dv-Fel">
-                                <rect key="frame" x="148.66666666666666" y="104" width="116.66666666666666" height="24"/>
+                                <rect key="frame" x="148.66666666666666" y="98.666666666666671" width="116.66666666666666" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kết quả mới nhất" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coY-AX-f2Y">
-                                <rect key="frame" x="142.66666666666666" y="50" width="128.99999999999997" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="151" y="50" width="112" height="15.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-Pq-IXJ">
-                                <rect key="frame" x="47" y="178" width="320" height="216"/>
+                                <rect key="frame" x="47" y="172.66666666666663" width="320" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="157809600">
                                     <!--2006-01-01 12:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="vi"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-hq-8wy">
-                                <rect key="frame" x="143.66666666666666" y="424" width="126.99999999999997" height="54"/>
+                                <rect key="frame" x="143.66666666666666" y="418.66666666666669" width="126.99999999999997" height="54"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Xnn-bR-VDT"/>
@@ -53,7 +55,15 @@
                                     <action selector="getRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugc-3E-7ZK"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-fa-6ki">
+                                <rect key="frame" x="40" y="492.66666666666669" width="334" height="223.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="VSR-Or-uQ7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="coY-AX-f2Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1De-ea-HOK"/>
@@ -61,23 +71,29 @@
                             <constraint firstItem="DhH-yr-oCj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ELi-QH-A3W"/>
                             <constraint firstItem="DhH-yr-oCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gcn-Fc-UxP"/>
                             <constraint firstItem="bid-dv-Fel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQJ-bH-e2x"/>
+                            <constraint firstItem="jYD-fa-6ki" firstAttribute="leading" secondItem="VSR-Or-uQ7" secondAttribute="leading" constant="40" id="RTr-Kz-XVH"/>
+                            <constraint firstItem="jYD-fa-6ki" firstAttribute="top" secondItem="10m-hq-8wy" secondAttribute="bottom" constant="20" id="VbD-kh-M4B"/>
                             <constraint firstAttribute="bottom" secondItem="DhH-yr-oCj" secondAttribute="bottom" id="ZaF-GU-V9v"/>
+                            <constraint firstItem="VSR-Or-uQ7" firstAttribute="bottom" secondItem="jYD-fa-6ki" secondAttribute="bottom" constant="20" id="g39-eX-iYl"/>
                             <constraint firstItem="2Sr-Pq-IXJ" firstAttribute="top" secondItem="bid-dv-Fel" secondAttribute="bottom" constant="50" id="jFk-yw-4JL"/>
                             <constraint firstItem="bid-dv-Fel" firstAttribute="top" secondItem="coY-AX-f2Y" secondAttribute="bottom" constant="33" id="l1h-C6-rQS"/>
                             <constraint firstItem="DhH-yr-oCj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="meo-pt-gbA"/>
                             <constraint firstItem="10m-hq-8wy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKX-vD-lQ6"/>
                             <constraint firstItem="2Sr-Pq-IXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1j-eS-ezm"/>
                             <constraint firstItem="coY-AX-f2Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="ptQ-aX-H7n"/>
+                            <constraint firstItem="VSR-Or-uQ7" firstAttribute="trailing" secondItem="jYD-fa-6ki" secondAttribute="trailing" constant="40" id="zCA-Iq-T4z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="2Sr-Pq-IXJ" id="0PW-rN-n2B"/>
+                        <outlet property="getRecordButton" destination="10m-hq-8wy" id="8V1-L7-OIh"/>
                         <outlet property="lastRecordDate" destination="bid-dv-Fel" id="yGa-lT-5ei"/>
+                        <outlet property="log" destination="jYD-fa-6ki" id="jFi-21-yZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.750000000000014"/>
         </scene>
     </scenes>
     <resources>

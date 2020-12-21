@@ -10,7 +10,6 @@
 		1774A6931E3E8667D3746637 /* Pods_XData_XDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299B61B7E11D9E58F48F8D54 /* Pods_XData_XDataUITests.framework */; };
 		3E5E1AB5EAB66148A3C08D62 /* Pods_XData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7E2C5D8817205EF02E8190 /* Pods_XData.framework */; };
 		D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D450D258A40E6001EDC58 /* AppDelegate.swift */; };
-		D77D4510258A40E6001EDC58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D450F258A40E6001EDC58 /* SceneDelegate.swift */; };
 		D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4511258A40E6001EDC58 /* ViewController.swift */; };
 		D77D4515258A40E6001EDC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77D4513258A40E6001EDC58 /* Main.storyboard */; };
 		D77D4518258A40E6001EDC58 /* XData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D77D4516258A40E6001EDC58 /* XData.xcdatamodeld */; };
@@ -52,7 +51,6 @@
 		C754FACB400EA44E193B12E7 /* Pods-XData-XDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData-XDataUITests.release.xcconfig"; path = "Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D77D450A258A40E6001EDC58 /* XData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77D450D258A40E6001EDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D77D450F258A40E6001EDC58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D77D4511258A40E6001EDC58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D77D4514258A40E6001EDC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D77D4517258A40E6001EDC58 /* XData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XData.xcdatamodel; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				D77D450D258A40E6001EDC58 /* AppDelegate.swift */,
-				D77D450F258A40E6001EDC58 /* SceneDelegate.swift */,
 				D77D4511258A40E6001EDC58 /* ViewController.swift */,
 				D77D4513258A40E6001EDC58 /* Main.storyboard */,
 				D77D4519258A40E7001EDC58 /* Assets.xcassets */,
@@ -427,7 +424,6 @@
 				D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */,
 				D77F5324258BB4E50061A3E3 /* Record.swift in Sources */,
 				D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */,
-				D77D4510258A40E6001EDC58 /* SceneDelegate.swift in Sources */,
 				D77D457A258A5B7E001EDC58 /* FirebaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +603,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,6 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

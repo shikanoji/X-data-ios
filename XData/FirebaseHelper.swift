@@ -9,14 +9,57 @@ import Foundation
 import FirebaseFirestore
 
 class FirebaseHelper {
+    static let shared = FirebaseHelper()
     let db = Firestore.firestore()
-    func addRecord(json: [String : Any]) {
-        var ref: DocumentReference? = nil
-        ref = db.collection("score").addDocument(data: json) { err in
+    
+    func addRecord(data: [String : Any], completionHandler: @escaping (_ err: Error?) -> Void) {
+        if let date = data["date"], date is String {
+            db.collection("score").document(date as! String).setData(data) { err in
+                if let err = err {
+                    completionHandler(err)
+                } else {
+                    completionHandler(nil)
+                }
+            }
+        }
+    }
+    
+    func lastestDate(completionHandler: @escaping (_ err: Error?, _ date: String?) -> Void){
+        db.collection("score").getDocuments() { (querySnapshot, err) in
             if let err = err {
-                print("Error adding document: \(err)")
+                completionHandler(err, nil)
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                var year = 2006
+                var month = 1
+                var date = 1
+                for document in querySnapshot!.documents {
+                    let id = document.documentID
+                    guard let iYear = Int(String(id.suffix(4))) else {
+                        continue
+                    }
+                    
+                    if iYear < year {
+                        continue
+                    }
+                    
+                    guard let iDate = Int(String(id.prefix(2))) else {
+                        continue
+                    }
+                    let start = id.index(id.startIndex, offsetBy: 3)
+                    let end = id.index(id.endIndex, offsetBy: -5)
+                    let range = start..<end
+
+                    let mySubstring = id[range]
+                    guard let iMonth = Int(String(mySubstring)) else {
+                        continue
+                    }
+                    
+                    if iYear > year {
+                        year = iYear
+                        month = iMonth
+                        date = iDate
+                    }
+                }
             }
         }
     }

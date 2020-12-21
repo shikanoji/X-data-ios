@@ -10,10 +10,13 @@ import Alamofire
 import SwiftSoup
 
 class Crawler {
-    func getRecordOf(date: String) {
-        AF.request("http://ketqua.net/xo-so-truyen-thong.php?ngay=\(date)").responseString { response in
+    static let shared = Crawler()
+    func getRecordOf(date: String, completionHandler: @escaping (_ data: [String:Any]?) -> Void) {
+        AF.request("http://ketqua.net/xo-so-truyen-thong.php?ngay=\(date)").responseString{ response in
             if let html = response.value {
-                self.parseHTML(html: html, date: date)
+                completionHandler(self.parseHTML(html: html, date: date))
+            } else {
+                completionHandler(nil)
             }
         }
     }
