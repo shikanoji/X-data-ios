@@ -24,7 +24,14 @@ class ViewController: UIViewController {
     
     func updateLastestRecord() {
         FirebaseHelper.shared.lastestDate { err, date in
-            self.lastRecordDate.text = date
+            if date != nil {
+                self.lastRecordDate.text = date
+                if let currentUpdateDate = self.dateFormatter.date(from: date!) {
+                    if let dateToGet = self.getNextDayOf(date: currentUpdateDate) {
+                        self.datePicker.date = dateToGet
+                    }
+                }
+            }
         }
     }
     
@@ -96,6 +103,7 @@ class ViewController: UIViewController {
     func toogleUI() {
         self.datePicker.isUserInteractionEnabled.toggle()
         self.getRecordButton.isUserInteractionEnabled.toggle()
+        self.updateLastestRecord()
     }
     
     func showLoadingAlert() {
