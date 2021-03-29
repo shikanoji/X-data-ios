@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lLd-ac-RIs">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lấy dữ liệu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XData" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,11 +45,11 @@
                                 <locale key="locale" localeIdentifier="vi"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10m-hq-8wy">
-                                <rect key="frame" x="143.66666666666666" y="414.66666666666669" width="126.99999999999997" height="54"/>
+                                <rect key="frame" x="157" y="414.66666666666669" width="100" height="54"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="CmO-Ji-Pwu"/>
                                     <constraint firstAttribute="height" constant="54" id="Xnn-bR-VDT"/>
-                                    <constraint firstAttribute="width" constant="127" id="uck-ZL-Ik8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="Lấy kết quả">
@@ -60,7 +61,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-fa-6ki">
-                                <rect key="frame" x="50" y="488.66666666666669" width="314" height="227.33333333333331"/>
+                                <rect key="frame" x="50" y="488.66666666666669" width="314" height="178.33333333333331"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -88,6 +89,10 @@
                             <constraint firstItem="VSR-Or-uQ7" firstAttribute="trailing" secondItem="jYD-fa-6ki" secondAttribute="trailing" constant="50" id="zCA-Iq-T4z"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Lấy dữ liệu" image="square.and.arrow.down" catalog="system" id="hH6-lK-bYR">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="square.and.arrow.down" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="datePicker" destination="2Sr-Pq-IXJ" id="0PW-rN-n2B"/>
                         <outlet property="getRecordButton" destination="10m-hq-8wy" id="8V1-L7-OIh"/>
@@ -99,9 +104,136 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.750000000000014"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sky-pH-rtn">
+            <objects>
+                <tabBarController id="lLd-ac-RIs" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Vnb-VZ-QWz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.29878020290000001" green="0.28003183009999999" blue="0.39216965440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XPs-Mp-xxm"/>
+                        <segue destination="oQ4-os-r2h" kind="relationship" relationship="viewControllers" id="prk-eN-BhU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjn-F0-Qwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-896" y="576"/>
+        </scene>
+        <!--Tính toán-->
+        <scene sceneID="bvf-Vy-9UQ">
+            <objects>
+                <viewController id="oQ4-os-r2h" customClass="CalculatorViewController" customModule="XData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2DM-XO-FHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="tqQ-GQ-NFh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFr-dB-8FX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHk-N2-tiQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-UT-zsX">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sq-u6-bcd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập số cần tính toán" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEy-Sh-2qD">
+                                                                <rect key="frame" x="107" y="100" width="200" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="DEP-L7-MRT"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="z5m-Bc-sP5"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-wj-P0Z">
+                                                                <rect key="frame" x="157" y="170" width="100" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dNH-cA-A0C"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="sNg-Dh-gMl"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Tính toán">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="calculate:" destination="oQ4-os-r2h" eventType="touchUpInside" id="fq9-fO-afO"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="TPm-wj-P0Z" firstAttribute="centerX" secondItem="3sq-u6-bcd" secondAttribute="centerX" id="6XU-ma-YvE"/>
+                                                            <constraint firstItem="mEy-Sh-2qD" firstAttribute="centerX" secondItem="3sq-u6-bcd" secondAttribute="centerX" id="T5h-ag-N4d"/>
+                                                            <constraint firstAttribute="height" constant="220" id="av8-se-2pw"/>
+                                                            <constraint firstItem="TPm-wj-P0Z" firstAttribute="top" secondItem="mEy-Sh-2qD" secondAttribute="bottom" constant="20" id="pWg-gV-0YY"/>
+                                                            <constraint firstItem="mEy-Sh-2qD" firstAttribute="top" secondItem="3sq-u6-bcd" secondAttribute="top" constant="100" id="uak-7H-fRw"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="3sq-u6-bcd" secondAttribute="bottom" id="Qxb-Tz-k4J"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7YO-UT-zsX" secondAttribute="trailing" id="Yp9-rj-jyz"/>
+                                            <constraint firstItem="7YO-UT-zsX" firstAttribute="top" secondItem="SHk-N2-tiQ" secondAttribute="top" id="eCU-1R-fDQ"/>
+                                            <constraint firstItem="7YO-UT-zsX" firstAttribute="leading" secondItem="SHk-N2-tiQ" secondAttribute="leading" id="qPv-Yg-QFG"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7YO-UT-zsX" secondAttribute="bottom" id="tDb-sh-cOD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SHk-N2-tiQ" firstAttribute="centerX" secondItem="WFr-dB-8FX" secondAttribute="centerX" id="AGz-5w-dZ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="SHk-N2-tiQ" secondAttribute="trailing" id="COd-iS-ZKL"/>
+                                    <constraint firstItem="SHk-N2-tiQ" firstAttribute="centerY" secondItem="WFr-dB-8FX" secondAttribute="centerY" id="GIJ-Lw-aMQ"/>
+                                    <constraint firstItem="SHk-N2-tiQ" firstAttribute="leading" secondItem="WFr-dB-8FX" secondAttribute="leading" id="HvM-Cb-lr4"/>
+                                    <constraint firstItem="SHk-N2-tiQ" firstAttribute="top" secondItem="WFr-dB-8FX" secondAttribute="top" id="Ng4-wR-Rm6"/>
+                                    <constraint firstAttribute="bottom" secondItem="SHk-N2-tiQ" secondAttribute="bottom" id="TUB-EN-0PK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oNd-a8-hAx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WFr-dB-8FX" firstAttribute="top" secondItem="2DM-XO-FHb" secondAttribute="top" id="3K9-8M-ToT"/>
+                            <constraint firstItem="tqQ-GQ-NFh" firstAttribute="top" secondItem="2DM-XO-FHb" secondAttribute="top" id="7iu-tA-QYu"/>
+                            <constraint firstItem="tqQ-GQ-NFh" firstAttribute="trailing" secondItem="2DM-XO-FHb" secondAttribute="trailing" id="ONI-Lj-Ayw"/>
+                            <constraint firstItem="tqQ-GQ-NFh" firstAttribute="bottom" secondItem="2DM-XO-FHb" secondAttribute="bottom" id="c86-H0-KTf"/>
+                            <constraint firstItem="tqQ-GQ-NFh" firstAttribute="leading" secondItem="2DM-XO-FHb" secondAttribute="leading" id="g4M-DN-0VK"/>
+                            <constraint firstItem="oNd-a8-hAx" firstAttribute="bottom" secondItem="WFr-dB-8FX" secondAttribute="bottom" id="i8e-RW-8uY"/>
+                            <constraint firstItem="WFr-dB-8FX" firstAttribute="leading" secondItem="2DM-XO-FHb" secondAttribute="leading" id="ssm-Kw-ea2"/>
+                            <constraint firstAttribute="trailing" secondItem="WFr-dB-8FX" secondAttribute="trailing" id="xbd-Ka-sSV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tính toán" image="pencil.circle" catalog="system" selectedImage="pencil.circle" id="RPZ-yk-6Va"/>
+                    <connections>
+                        <outlet property="calculate" destination="7YO-UT-zsX" id="P7e-ib-GQt"/>
+                        <outlet property="numberSearchField" destination="mEy-Sh-2qD" id="at5-4o-GWJ"/>
+                        <outlet property="searchButton" destination="TPm-wj-P0Z" id="7CI-Uq-7HC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufx-ge-6qW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="813.58695652173924"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="250" height="541.33331298828125"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -113,6 +245,9 @@
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
