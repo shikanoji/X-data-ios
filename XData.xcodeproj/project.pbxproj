@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1774A6931E3E8667D3746637 /* Pods_XData_XDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299B61B7E11D9E58F48F8D54 /* Pods_XData_XDataUITests.framework */; };
 		3E5E1AB5EAB66148A3C08D62 /* Pods_XData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7E2C5D8817205EF02E8190 /* Pods_XData.framework */; };
+		D76D0AC02612282300529DA9 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D0ABF2612282300529DA9 /* AppSetting.swift */; };
 		D770C0C526108FDF000043DF /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D770C0C426108FDF000043DF /* CalculatorViewController.swift */; };
 		D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D450D258A40E6001EDC58 /* AppDelegate.swift */; };
 		D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4511258A40E6001EDC58 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		AC5AFED7B9F9DCE57C36A12D /* Pods-XDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDataTests.release.xcconfig"; path = "Target Support Files/Pods-XDataTests/Pods-XDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4E38405C66DC09BFFA71EA9 /* Pods-XData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData.debug.xcconfig"; path = "Target Support Files/Pods-XData/Pods-XData.debug.xcconfig"; sourceTree = "<group>"; };
 		C754FACB400EA44E193B12E7 /* Pods-XData-XDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData-XDataUITests.release.xcconfig"; path = "Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D76D0ABF2612282300529DA9 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		D770C0C426108FDF000043DF /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		D77D450A258A40E6001EDC58 /* XData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77D450D258A40E6001EDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D76D0A7C2612256600529DA9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D77D4511258A40E6001EDC58 /* ViewController.swift */,
+				D770C0C426108FDF000043DF /* CalculatorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D76D0A7D2612257800529DA9 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				D77F5328258BB6290061A3E3 /* Crawler.swift */,
+				D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */,
+				D76D0ABF2612282300529DA9 /* AppSetting.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		D76D0A7E2612259100529DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D77F5323258BB4E50061A3E3 /* Record.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D76D0A822612259E00529DA9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D77D451B258A40E7001EDC58 /* LaunchScreen.storyboard */,
+				D77D4513258A40E6001EDC58 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		D77D4501258A40E6001EDC58 = {
 			isa = PBXGroup;
 			children = (
@@ -136,18 +174,15 @@
 		D77D450C258A40E6001EDC58 /* XData */ = {
 			isa = PBXGroup;
 			children = (
+				D76D0A822612259E00529DA9 /* Storyboard */,
+				D76D0A7E2612259100529DA9 /* Model */,
+				D76D0A7D2612257800529DA9 /* Global */,
+				D76D0A7C2612256600529DA9 /* ViewController */,
 				D77D450D258A40E6001EDC58 /* AppDelegate.swift */,
-				D77D4511258A40E6001EDC58 /* ViewController.swift */,
-				D77D4513258A40E6001EDC58 /* Main.storyboard */,
 				D77D4519258A40E7001EDC58 /* Assets.xcassets */,
-				D77D451B258A40E7001EDC58 /* LaunchScreen.storyboard */,
 				D77D451E258A40E7001EDC58 /* Info.plist */,
 				D77D4516258A40E6001EDC58 /* XData.xcdatamodeld */,
 				D77D4543258A41F9001EDC58 /* GoogleService-Info.plist */,
-				D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */,
-				D77F5323258BB4E50061A3E3 /* Record.swift */,
-				D77F5328258BB6290061A3E3 /* Crawler.swift */,
-				D770C0C426108FDF000043DF /* CalculatorViewController.swift */,
 			);
 			path = XData;
 			sourceTree = "<group>";
@@ -424,6 +459,7 @@
 			files = (
 				D77F5329258BB6290061A3E3 /* Crawler.swift in Sources */,
 				D77D4518258A40E6001EDC58 /* XData.xcdatamodeld in Sources */,
+				D76D0AC02612282300529DA9 /* AppSetting.swift in Sources */,
 				D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */,
 				D77F5324258BB4E50061A3E3 /* Record.swift in Sources */,
 				D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */,
