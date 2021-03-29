@@ -11,7 +11,7 @@ import SwiftSoup
 
 class Crawler {
     static let shared = Crawler()
-    func getRecordOf(date: String, completionHandler: @escaping (_ data: [String:Any]?) -> Void) {
+    func getRecordOf(date: String, completionHandler: @escaping (_ data: Record?) -> Void) {
         AF.request("http://ketqua.net/xo-so-truyen-thong.php?ngay=\(date)").responseString{ response in
             if let html = response.value {
                 completionHandler(self.parseHTML(html: html, date: date))
@@ -20,8 +20,8 @@ class Crawler {
             }
         }
     }
-
-    func parseHTML(html: String, date: String) -> [String: Any]? {
+    
+    func parseHTML(html: String, date: String) -> Record? {
         guard let doc: Document = try? SwiftSoup.parseBodyFragment(html) else {
             return nil
         }
@@ -89,11 +89,20 @@ class Crawler {
             }
             json["seventh"] = seventhArr
             
-            json["date"] = date
-            return json
+            json["date"] = convertDateFormater(date)
+            return Record.init(JSON: json)
         } catch {
             print("Error")
             return nil
         }
+    }
+    
+    func convertDateFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let _date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: _date!)
     }
 }
