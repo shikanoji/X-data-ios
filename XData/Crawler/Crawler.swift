@@ -8,17 +8,20 @@
 import Foundation
 import Alamofire
 import SwiftSoup
+import SwiftDate
+import RxSwift
 
 class Crawler {
     static let shared = Crawler()
+    let disposedBag = DisposeBag()
     func getRecordOf(date: String, completionHandler: @escaping (_ data: Record?) -> Void) {
-        AF.request("http://ketqua.net/xo-so-truyen-thong.php?ngay=\(date)").responseString{ response in
-            if let html = response.value {
-                completionHandler(self.parseHTML(html: html, date: date))
-            } else {
+        APIManager.shared.getSiteHtml(withUrl: "http://ketqua1.net/xo-so-truyen-thong.php?ngay=\(date)")
+            .subscribe(onSuccess: { data in
+                completionHandler(self.parseHTML(html: data, date: date))
+            }, onError: { error in
                 completionHandler(nil)
-            }
-        }
+            })
+            .disposed(by: disposedBag)
     }
     
     func parseHTML(html: String, date: String) -> Record? {
@@ -89,20 +92,11 @@ class Crawler {
             }
             json["seventh"] = seventhArr
             
-            json["date"] = convertDateFormater(date)
+            json["date"] = date.toDate("dd-MM-yyyy")?.toFormat(Constant.Date.standardFormat)
             return Record.init(JSON: json)
         } catch {
             print("Error")
             return nil
         }
-    }
-    
-    func convertDateFormater(_ date: String) -> String
-    {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let _date = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: _date!)
     }
 }

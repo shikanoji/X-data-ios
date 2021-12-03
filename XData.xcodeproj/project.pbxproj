@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		1774A6931E3E8667D3746637 /* Pods_XData_XDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299B61B7E11D9E58F48F8D54 /* Pods_XData_XDataUITests.framework */; };
 		3E5E1AB5EAB66148A3C08D62 /* Pods_XData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7E2C5D8817205EF02E8190 /* Pods_XData.framework */; };
+		D76A34302696D4B6005D48CD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76A342F2696D4B6005D48CD /* APIService.swift */; };
+		D76A34322696D64A005D48CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76A34312696D64A005D48CD /* APIManager.swift */; };
 		D76D0AC02612282300529DA9 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D0ABF2612282300529DA9 /* AppSetting.swift */; };
+		D76EF143269FFE700007D729 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF142269FFE700007D729 /* GradientView.swift */; };
+		D76EF146269FFF1B0007D729 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF145269FFF1B0007D729 /* UIColorExt.swift */; };
 		D770C0C526108FDF000043DF /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D770C0C426108FDF000043DF /* CalculatorViewController.swift */; };
 		D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D450D258A40E6001EDC58 /* AppDelegate.swift */; };
 		D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4511258A40E6001EDC58 /* ViewController.swift */; };
@@ -23,6 +27,9 @@
 		D77D457A258A5B7E001EDC58 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */; };
 		D77F5324258BB4E50061A3E3 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F5323258BB4E50061A3E3 /* Record.swift */; };
 		D77F5329258BB6290061A3E3 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F5328258BB6290061A3E3 /* Crawler.swift */; };
+		D7B4757226944C98006F02F6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4757126944C98006F02F6 /* Constant.swift */; };
+		D7B4757726945AE8006F02F6 /* NeuMorphismButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4757626945AE8006F02F6 /* NeuMorphismButton.swift */; };
+		D7B47579269486A0006F02F6 /* NeuMorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B47578269486A0006F02F6 /* NeuMorphismView.swift */; };
 		E9814733375996A519C4980A /* Pods_XDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24174388B1E90D2C2C5310B1 /* Pods_XDataTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +58,11 @@
 		AC5AFED7B9F9DCE57C36A12D /* Pods-XDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDataTests.release.xcconfig"; path = "Target Support Files/Pods-XDataTests/Pods-XDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4E38405C66DC09BFFA71EA9 /* Pods-XData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData.debug.xcconfig"; path = "Target Support Files/Pods-XData/Pods-XData.debug.xcconfig"; sourceTree = "<group>"; };
 		C754FACB400EA44E193B12E7 /* Pods-XData-XDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData-XDataUITests.release.xcconfig"; path = "Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D76A342F2696D4B6005D48CD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D76A34312696D64A005D48CD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D76D0ABF2612282300529DA9 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		D76EF142269FFE700007D729 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D76EF145269FFF1B0007D729 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		D770C0C426108FDF000043DF /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		D77D450A258A40E6001EDC58 /* XData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77D450D258A40E6001EDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +82,9 @@
 		D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		D77F5323258BB4E50061A3E3 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		D77F5328258BB6290061A3E3 /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
+		D7B4757126944C98006F02F6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D7B4757626945AE8006F02F6 /* NeuMorphismButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuMorphismButton.swift; sourceTree = "<group>"; };
+		D7B47578269486A0006F02F6 /* NeuMorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuMorphismView.swift; sourceTree = "<group>"; };
 		DAB75A40CB7E5F2B86028917 /* Pods-XData-XDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XData-XDataUITests.debug.xcconfig"; path = "Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB7E2C5D8817205EF02E8190 /* Pods_XData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +127,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D76A342E2696CDFF005D48CD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D76A342F2696D4B6005D48CD /* APIService.swift */,
+				D76A34312696D64A005D48CD /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D76D0A7C2612256600529DA9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +148,8 @@
 		D76D0A7D2612257800529DA9 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				D77F5328258BB6290061A3E3 /* Crawler.swift */,
-				D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */,
 				D76D0ABF2612282300529DA9 /* AppSetting.swift */,
+				D7B4757126944C98006F02F6 /* Constant.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -147,6 +169,14 @@
 				D77D4513258A40E6001EDC58 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D76EF144269FFF040007D729 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D76EF145269FFF1B0007D729 /* UIColorExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D77D4501258A40E6001EDC58 = {
@@ -174,6 +204,11 @@
 		D77D450C258A40E6001EDC58 /* XData */ = {
 			isa = PBXGroup;
 			children = (
+				D76EF144269FFF040007D729 /* Extensions */,
+				D76A342E2696CDFF005D48CD /* Networking */,
+				D7B4757526945A80006F02F6 /* CustomView */,
+				D7B47574269459BA006F02F6 /* Crawler */,
+				D7B47573269459A9006F02F6 /* Firebase */,
 				D76D0A822612259E00529DA9 /* Storyboard */,
 				D76D0A7E2612259100529DA9 /* Model */,
 				D76D0A7D2612257800529DA9 /* Global */,
@@ -205,6 +240,32 @@
 			path = XDataUITests;
 			sourceTree = "<group>";
 		};
+		D7B47573269459A9006F02F6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D77D4579258A5B7E001EDC58 /* FirebaseHelper.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D7B47574269459BA006F02F6 /* Crawler */ = {
+			isa = PBXGroup;
+			children = (
+				D77F5328258BB6290061A3E3 /* Crawler.swift */,
+			);
+			path = Crawler;
+			sourceTree = "<group>";
+		};
+		D7B4757526945A80006F02F6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D7B4757626945AE8006F02F6 /* NeuMorphismButton.swift */,
+				D7B47578269486A0006F02F6 /* NeuMorphismView.swift */,
+				D76EF142269FFE700007D729 /* GradientView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		FDF63A33235CB3D5E7F607D8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +291,7 @@
 				D77D4507258A40E6001EDC58 /* Frameworks */,
 				D77D4508258A40E6001EDC58 /* Resources */,
 				D6E96473EFF41F351F6D5453 /* [CP] Embed Pods Frameworks */,
+				9754956E889E2611DE48B6A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +330,7 @@
 				D77D452B258A40E7001EDC58 /* Frameworks */,
 				D77D452C258A40E7001EDC58 /* Resources */,
 				4FAE40BF6CC9147789DE3170 /* [CP] Embed Pods Frameworks */,
+				34B862BE9771D03139953681 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +435,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		34B862BE9771D03139953681 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4FAE40BF6CC9147789DE3170 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +467,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XData-XDataUITests/Pods-XData-XDataUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9754956E889E2611DE48B6A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XData/Pods-XData-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XData/Pods-XData-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XData/Pods-XData-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A9CAEF5BAF88055AF5F9896E /* [CP] Check Pods Manifest.lock */ = {
@@ -459,12 +556,19 @@
 			files = (
 				D77F5329258BB6290061A3E3 /* Crawler.swift in Sources */,
 				D77D4518258A40E6001EDC58 /* XData.xcdatamodeld in Sources */,
+				D7B47579269486A0006F02F6 /* NeuMorphismView.swift in Sources */,
+				D7B4757226944C98006F02F6 /* Constant.swift in Sources */,
+				D76EF143269FFE700007D729 /* GradientView.swift in Sources */,
 				D76D0AC02612282300529DA9 /* AppSetting.swift in Sources */,
 				D77D4512258A40E6001EDC58 /* ViewController.swift in Sources */,
 				D77F5324258BB4E50061A3E3 /* Record.swift in Sources */,
 				D77D450E258A40E6001EDC58 /* AppDelegate.swift in Sources */,
 				D770C0C526108FDF000043DF /* CalculatorViewController.swift in Sources */,
 				D77D457A258A5B7E001EDC58 /* FirebaseHelper.swift in Sources */,
+				D76A34322696D64A005D48CD /* APIManager.swift in Sources */,
+				D76A34302696D4B6005D48CD /* APIService.swift in Sources */,
+				D76EF146269FFF1B0007D729 /* UIColorExt.swift in Sources */,
+				D7B4757726945AE8006F02F6 /* NeuMorphismButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,25 +7,22 @@
 
 import Foundation
 import FirebaseFirestore
+import SwiftDate
 
 class FirebaseHelper {
     static let shared = FirebaseHelper()
     let db = Firestore.firestore()
     
     func addRecord(data: Record?, completionHandler: @escaping (_ err: Error?) -> Void) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
         if let data = data, let date = data.date, date is String {
             db.collection("score").document(date as! String).setData(data.toJSON()) { err in
                 if let err = err {
                     completionHandler(err)
                 } else {
                     self.lastestDate { err, lastestDate in
-                        if let checkDate = dateFormatter.date(from: date as! String), let _lastestDate = lastestDate, let lastest = dateFormatter.date(from: _lastestDate) {
-                            if Calendar.current.compare(checkDate, to: lastest, toGranularity: .day) == .orderedDescending {
-                                self.db.collection("info").document("latestUpdate").setData(["date" : date]) { err in
-                                    //Do something
-                                }
+                        if let cDate = date.toDate(), let lDate = lastestDate?.toDate(), cDate > lDate {
+                            self.db.collection("info").document("latestUpdate").setData(["date" : date]) { err in
+                                //Do something
                             }
                         }
                     }

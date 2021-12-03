@@ -11,6 +11,13 @@ target 'XData' do
   pod 'Firebase/Firestore'
   pod 'Alamofire'
   pod 'ObjectMapper'
+  pod 'SwiftDate'
+  pod 'Moya/RxSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'GoogleSignIn'
+  pod 'SwiftEntryKit'
+  pod 'SwiftyJSON'
 
   target 'XDataTests' do
     inherit! :search_paths
